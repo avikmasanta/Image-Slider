@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Slideshow</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #ADD8E6; 
+        }
+        
+        
+    </style>
+</head>
+
+<body onload="changeImage()">
+    <center>
+        <img id="slide" width="400px" height="600px" margin-top="30%">
+    </center>
+    <!-- <button onclick="changeImage()">next</button>
+    <button onclick="changeImagep()">prev</button> -->
+    <script>
+        var i = 0;
+        var images = Array();
+        images[0] = 'a.jpg';
+        images[1] = 'b.jpg';
+        images[2] = 'c.jpg';
+        images[3] = 'd.jpg.jpg';
+        function changeImage() {
+            document.getElementById('slide').src = images[i];
+            if (i < images.length - 1) {
+                i++;
+            } else {
+                i = 0;
+            }
+             setTimeout(changeImage, 2000);
+        }
+       
+        // function changeImagep() {
+        //     document.getElementById('slide').src = images[i];
+        //     if (i >0) {
+        //         i--;
+        //     } else {
+        //         i = images.length-1;
+        //     }
+        //     // setTimeout(changeImage, 1000);
+        // }
+
+        // // Initial call to start the slideshow
+        // changeImage();
+        
+    </script>
+    
+</body>
+
+</html>
